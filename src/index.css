@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyan-primary: #00f2ff;
+  --color-cyan-dark: #008c95;
+  --color-black-deep: #0a0a0a;
+  --color-black-card: #141414;
+}
+
+@layer base {
+  body {
+    @apply bg-black-deep text-white selection:bg-cyan-primary selection:text-black;
+  }
+}
+
+.cyan-glow {
+  text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+}
+
+.cyan-border-glow {
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+}
+
+.glass-card {
+  @apply bg-black-card border border-white/10 backdrop-blur-md;
+}
